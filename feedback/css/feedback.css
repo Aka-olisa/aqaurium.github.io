@@ -1,0 +1,287 @@
+/* -------------Declaration of css variables and universal settings------------ */
+:root{
+    --dark-blue: #060E23;
+    --dark-red: #962124;
+    --light-grey: rgba(245, 245, 245, 0.8);
+}
+
+*{
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--light-grey);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+
+/* -----------------------------------Header------------------------------------ Start*/
+
+header{
+    padding-left: 10px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    height: 120px;
+    width: 120px;
+}
+
+#logoAndNameDiv{
+    display: flex;
+    align-items: center;
+}
+
+#websiteName{
+    font-size: 1.7rem;
+    color: black;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    display: block;
+    list-style-type: none;
+    margin-left: 30px;
+    font-size: 1.2rem;
+    transition: 300ms;
+    color: black;
+}
+
+/* ------------Active Tab Configuration----- */
+#nav_contact{
+    color: var(--dark-red);
+    padding-bottom: 6px;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: var(--dark-red);
+}
+
+nav li:not(#nav_contact):hover{
+    transform: scale(1.2) translateY(-5px);
+    color: var(--dark-red);
+}
+/* --------------------------------------Header------------------------------- End */
+
+
+/* --------------------------------------Main---------------------------------Start */
+/* -----------Picture And Span----------------------- */
+#eventPictureAndSpan{
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#eventBookingPicture{
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(../../images/feedback.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: round;
+}
+
+#eventPictureAndSpan > span{
+    font-size: 2.5rem;
+}
+/* -------------------------------------------- */
+
+#bookingFormSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+div#nameInput{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+div#nameInput{
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+div#contactInput{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+div#contactInput input{
+    margin-top: 1rem
+}
+
+input.userDetailInput{
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px darkgray;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1rem;
+    outline: none;
+    width: 320px;
+}
+
+div#otherInput{
+    margin-bottom: 2rem;
+}
+
+div#otherInput > input,
+div#otherInput > select{
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    height: 40px;
+    width: 200px;
+    box-shadow: 0px 0px 10px darkgray;
+    outline: none;
+}
+
+div#otherInput textarea{
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0px 0px 10px darkgray;
+    outline: none;
+}
+
+div#otherInput span{
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+input[type= "submit"]{
+    border: none;
+    border-radius: 10px;
+    background-color: var(--dark-red);
+    height: 40px;
+    width: 200px;
+    color: white;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    align-self: center;
+    box-shadow: 0px 0px 5px var(--dark-red);
+    font-size: 1rem;
+}
+/* --------------------------------------Main---------------------------------End */
+
+
+/* ------------------------------------Footer------------------------------------------ Start */
+footer{
+    background-color: var(--dark-blue);
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+}
+
+#footerOptionsDiv{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#backToTopDiv,
+#contactUsDiv{
+    display: flex;
+    align-items: center;
+}
+
+#backToTopDiv span,
+#contactUsDiv span{
+    font-family: Lato_Regular;
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 10px;
+}
+
+#contactUsDiv div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border-color: white;
+    border-style: dashed;
+    transition: 200ms;
+}
+
+#contactUsDiv div:hover{
+    transform: scale(1.4);
+}
+
+#backToTopDiv div{
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#copyright{
+    grid-row: 2;
+    text-align: center;
+    display: block;
+    font-family: Lato_Light;
+    font-size: 1.2rem;
+    color: lightgray;
+    opacity: 0.7;
+}
+
+.social{
+    color: white;
+    font-size: 1.4rem !important;
+}
+
+.toTop{
+    font-size: 2rem !important;
+    color: rgb(26, 26, 26);
+    transition: 200ms;
+}
+
+.toTop:hover{
+    transform: translateY(-3px);
+}
+
+/* ------------------------------------------Footer-------------------------------------- End */

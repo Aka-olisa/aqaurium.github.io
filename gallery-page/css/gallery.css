@@ -1,0 +1,215 @@
+/* -------------Declaration of css variables and universal settings------------ */
+:root{
+    --dark-blue: #060E23;
+    --dark-red: #962124;
+    --light-grey: rgba(245, 245, 245, 0.8);
+}
+
+*{
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--dark-blue);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+
+/* -----------------------------------Header------------------------------------ Start*/
+
+header{
+    padding-left: 10px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    height: 120px;
+    width: 120px;
+}
+
+#logoAndNameDiv{
+    display: flex;
+    align-items: center;
+}
+
+#websiteName{
+    font-size: 1.7rem;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    display: block;
+    list-style-type: none;
+    margin-left: 30px;
+    font-size: 1.2rem;
+    transition: 300ms;
+}
+
+/* ------------Active Tab Configuration----- */
+#nav_gallery{
+    color: var(--dark-red);
+    padding-bottom: 6px;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: var(--dark-red);
+}
+
+nav li:not(#nav_gallery):hover{
+    transform: scale(1.2) translateY(-5px);
+    color: var(--dark-red);
+}
+/* --------------------------------------Header------------------------------- End */
+
+/* --------------------------------------Main--------------------------------- Start */
+
+/* ------------------Our gallery---------------------------Start */
+#gallerySection{
+    height: 700px;
+    overflow-y: scroll;
+}
+
+.eachAnimalWrapper{
+    padding: 2rem;
+    display: flex;
+    border-bottom: 3px dashed white;
+}
+
+.animalImage{
+    height: 200px;
+    width: 300px;
+}
+/* ------------------Our gallery---------------------------End */
+
+/* ---------------Classification of species-------------- Start */
+#classificationSection{
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#classificationSection > span{
+    display: block;
+    text-align: center;
+    font-size: 1.7rem;
+    margin-bottom: 4rem;
+}
+
+table{
+    border: 2px solid white;
+    border-collapse: collapse;
+    height: 400px;
+    width: 80%;
+    align-self: center;
+}
+
+td, th{
+    border: 2px solid white;
+    text-align: center;
+    padding: 1rem;
+}
+/* ---------------Classification of species-------------- End */
+
+/* --------------------------------------Main--------------------------------- End */
+
+/* ------------------------------------Footer--------------------------------- Start */
+footer{
+    background-color: var(--dark-blue);
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+}
+
+#footerOptionsDiv{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#backToTopDiv,
+#contactUsDiv{
+    display: flex;
+    align-items: center;
+}
+
+#backToTopDiv span,
+#contactUsDiv span{
+    font-family: Lato_Regular;
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 10px;
+}
+
+#contactUsDiv div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border-color: white;
+    border-style: dashed;
+    transition: 200ms;
+}
+
+#contactUsDiv div:hover{
+    transform: scale(1.4);
+}
+
+#backToTopDiv div{
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#copyright{
+    grid-row: 2;
+    text-align: center;
+    display: block;
+    font-family: Lato_Light;
+    font-size: 1.2rem;
+    color: lightgray;
+    opacity: 0.7;
+}
+
+.social{
+    color: white;
+    font-size: 1.4rem !important;
+}
+
+.toTop{
+    font-size: 2rem !important;
+    color: rgb(26, 26, 26);
+    transition: 200ms;
+}
+
+.toTop:hover{
+    transform: translateY(-3px);
+}
+
+/* ------------------------------------------Footer-------------------------------------- End */

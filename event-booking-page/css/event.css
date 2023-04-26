@@ -1,0 +1,622 @@
+/* -------------Declaration of css variables and universal settings------------ */
+:root{
+    --dark-blue: #060E23;
+    --dark-red: #962124;
+    --light-grey: rgba(245, 245, 245, 0.8);
+}
+
+*{
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--light-grey);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+
+/* -----------------------------------Header------------------------------------ Start*/
+
+header{
+    /* border: 2px solid black; */
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+#logo{
+    height: 120px;
+    width: 120px;
+   
+   
+}
+
+#logoAndNameDiv{
+    display: flex;
+    align-items: center;
+    transition: 500ms;
+}
+
+#websiteName{
+    font-size: 170%;
+    color: black;
+    transition: 500ms;
+    
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    display: block;
+    list-style-type: none;
+    margin-left: 30px;
+    font-size: 1.2rem;
+    transition: 300ms;
+    color: black;
+}
+
+/* ------------Active Tab Configuration----- */
+#nav_event{
+    color: var(--dark-red);
+    padding-bottom: 6px;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: var(--dark-red);
+}
+
+nav li:not(#nav_event):hover{
+    transform: scale(1.2) translateY(-5px);
+    color: var(--dark-red);
+}
+/* --------------------------------------Header------------------------------- End */
+
+/* --------------------------------------Main---------------------------------Start */
+/* -----------Picture And Span----------------------- */
+
+.mobile_view
+{
+    display: none;
+}
+.mobile_nav
+{
+    display: none;
+}
+
+#eventPictureAndSpan{
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+    width: 100%;
+    
+}
+
+#eventBookingPicture{
+    z-index: -1;
+    position: absolute;
+    height: 400px;
+    width: 100%;
+    background-image: url(../../images/eventBooking.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: -150px;
+    /* Add the blur effect */
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+  
+}
+
+#eventPictureAndSpan > span{
+    font-size: 2.5rem;
+}
+/* -------------------------------------------- */
+
+
+
+#bookingFormSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+div#nameInput{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+div#nameInput{
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+div#contactInput{
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+div#contactInput input{
+    margin-top: 1rem
+}
+
+input.userDetailInput{
+    border: none;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px darkgray;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1rem;
+    outline: none;
+    width: 320px;
+}
+
+div#eventTypeInput{
+    margin-bottom: 1rem;
+}
+
+div#eventTypeInput span:first-child{
+    display: block;
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+div#eventTypeInput span:not(:first-child){
+    color: black;
+}
+
+div#eventTypeInput ul,
+div#eventTypeInput li{
+    list-style-type: none;
+    margin: none;
+    padding: 0;
+    padding-left: 5px;
+}
+
+div#eventTypeInput li{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+div#eventTypeInput input{
+    transform: scale(1.5);
+    margin-right: 12px;
+}
+
+div#otherInput{
+    margin-bottom: 2rem;
+}
+
+div#otherInput > input{
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    height: 40px;
+    width: 200px;
+    box-shadow: 0px 0px 10px darkgray;
+    outline: none;
+}
+
+div#otherInput span{
+    color: black;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+input[type= "submit"]{
+    border: none;
+    border-radius: 10px;
+    background-color: var(--dark-red);
+    height: 40px;
+    width: 200px;
+    color: white;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    align-self: center;
+    box-shadow: 0px 0px 5px var(--dark-red);
+    font-size: 1rem;
+}
+/* --------------------------------------Main---------------------------------End */
+
+
+
+/* ------------------------------------Footer------------------------------------------ Start */
+footer{
+    background-color: var(--dark-blue);
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+    /* border: 2px solid black; */
+    width: 100%;
+}
+
+#footerOptionsDiv{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    display: flex;
+    justify-content: space-between;
+
+    
+}
+
+#backToTopDiv,
+#contactUsDiv{
+    display: flex;
+    align-items: center;
+}
+
+#backToTopDiv span,
+#contactUsDiv span{
+    font-family: Lato_Regular;
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 10px;
+}
+
+#contactUsDiv div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border-color: white;
+    border-style: dashed;
+    transition: 200ms;
+}
+
+#contactUsDiv div:hover{
+    transform: scale(1.4);
+}
+
+#backToTopDiv div{
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#copyright{
+    grid-row: 2;
+    text-align: center;
+    display: block;
+    font-family: Lato_Light;
+    font-size: 1.2rem;
+    color: lightgray;
+    opacity: 0.7;
+}
+
+.social{
+    color: white;
+    font-size: 1.4rem !important;
+}
+
+.toTop{
+    font-size: 2rem !important;
+    color: rgb(26, 26, 26);
+    transition: 200ms;
+}
+
+.toTop:hover{
+    transform: translateY(-3px);
+}
+
+/* ------------------------------------------Footer-------------------------------------- End */
+
+
+/*      -----------------MobileResponsive--------------------------*/
+
+@media screen and (min-width:270px) and (max-width:700px){
+
+    body{
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .main_nav{
+        display: none;
+    }
+    header{
+        padding-right: 15px;
+        height: 80px;
+      
+    }
+    #websiteName{
+        font-size: 150%;
+        color: black;
+    }
+    #logo{
+        height: 100px;
+        width: 100px;
+        margin-left: -30px;
+        margin-right: -25px;
+        margin-top: -5px;
+    }
+    .mobile_nav 
+    {
+        display: block;
+    }
+
+    .mobile_nav .fa
+    {
+        color: #954C67;
+        font-size: 180%;
+        transition: 500ms;
+    }
+    .mobile_view
+    {
+        /* border: 2px solid black; */
+        height: 0px;
+        transition: 500ms;
+        background-color: #fff;
+        position: relative;
+        right: 100%;
+    }
+    .mobile_view ul
+    {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px;
+        color: black;
+        
+        
+    }
+    .mobile_view  a 
+    {
+        color: black;
+    }
+    .mobile_view  ul p
+    {
+        height: 27px;
+        width: 100%;
+        padding: 5px;
+        text-align: right;
+        margin-top: -14px;
+        margin-bottom: -4px;
+        padding-right: 17px;
+        background-color: #fff;
+        opacity: 100%;
+    }
+    .mobile_view  ul p .fa-times
+    {
+        font-size: 25px;
+        font-weight: 100;
+        color: #954C67;
+        opacity: 70%;
+    }
+
+    .mobile_view  a li  
+    {
+        display: block;
+        list-style-type: none;
+        font-size: 1.3rem;
+        transition: 300ms;
+        width: fit-content;
+        color: black;
+        margin: auto;
+        margin-top: 17px;
+    }
+    .mobile_view  a #nav_home
+    {
+        margin-top:5px ;
+    }
+    .mobile_view  a li :hover
+    { 
+        transform: scale(1.2) translateY(-5px);
+        color: var(--dark-red);
+    }
+    #eventBookingPicture{
+        width: 100%;
+        background-image: url(../../images/eventBooking.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position-y: 10px;
+
+      
+    }
+    
+
+    #bookingFormSection{
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid black; */
+        width: 100%;
+    }
+    form{
+        width: 85%;
+        display: flex;
+        flex-direction: column;
+    }
+    div#nameInput{
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem;
+      
+    }
+    
+    div#contactInput{
+        
+        display: flex;
+        flex-direction: column;
+        margin-top: -14px;
+        
+    }
+    input.user1
+    {
+        margin-bottom: 15px;
+    }
+    input.userDetailInput{
+        width: 100%;
+    }
+    div#otherInput > input{
+        width:  100%;
+    }
+    #footerOptionsDiv{
+        margin-left: 1rem;
+        margin-right: 1rem;
+        display: flex;
+        flex-direction: column; 
+        
+    }
+    #contactUsDiv
+    {
+        margin: auto;
+        margin-bottom: 20px;
+        margin-top: -15px;
+
+    }
+    #backToTopDiv
+    {
+        margin: auto;
+        margin-bottom: -10px;
+
+    }
+
+
+    #backToTopDiv span,
+    #contactUsDiv span{
+    font-family: Lato_Regular;
+    font-size: 130%;
+    color: white;
+    margin-right: 10px;
+}
+   
+}
+
+/* ---------------------Tablet Responsive------------------- */
+                                    /* And */
+/* ---------------------Laptop Responsive------------------- */
+
+@media screen and (min-width:701px) and (max-width:1024px){
+    header{
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+    #logoAndNameDiv{
+        display: flex;
+        align-items: center;
+        margin-left: -25px;
+    }
+    #logo{
+        height: 100px;
+        width: 100px;
+    }
+    #websiteName{
+        font-size: 120%;
+        color: black;
+        margin-left: -20px;
+    }
+    nav ul li{
+        display: block;
+        list-style-type: none;
+        margin-left: 15px;
+        font-size: 110%;
+        transition: 300ms;
+        color: black;
+    }
+    #eventBookingPicture{
+        background-position-y: -55px;
+    }
+    #bookingFormSection{
+        /* border: 2px solid black; */
+        width: 100%;
+    }
+    form{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    input.userDetailInput{
+        
+        width: 48%;
+    }
+    div#otherInput > input{
+        width:  70%;
+    }
+   
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,330 @@
+/* -------------Declaration of css variables and universal settings------------ */
+:root{
+    --dark-blue: #060E23;
+    --dark-red: #962124;
+    --light-grey: rgba(245, 245, 245, 0.8);
+}
+
+*{
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--light-grey);
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+
+/* -----------------------------------Header------------------------------------ Start*/
+
+header{
+    padding-left: 10px;
+    padding-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo{
+    height: 120px;
+    width: 120px;
+}
+
+#logoAndNameDiv{
+    display: flex;
+    align-items: center;
+}
+
+#websiteName{
+    font-size: 1.7rem;
+    color: black;
+}
+
+nav ul{
+    display: flex;
+}
+
+nav ul li{
+    display: block;
+    list-style-type: none;
+    margin-left: 30px;
+    font-size: 1.2rem;
+    transition: 300ms;
+    color: black;
+}
+
+/* ------------Active Tab Configuration----- */
+#nav_contact{
+    color: var(--dark-red);
+    padding-bottom: 6px;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-bottom-color: var(--dark-red);
+}
+
+nav li:not(#nav_contact):hover{
+    transform: scale(1.2) translateY(-5px);
+    color: var(--dark-red);
+}
+/* --------------------------------------Header------------------------------- End */
+
+/* --------------------------------------Main--------------------------------- Start */
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+main > span{
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: black;
+}
+
+main > p{
+    width: 90%;
+    color: black;
+    text-align: justify;
+    font-size: 1.3rem;
+    align-self: center;
+}
+
+#sitePicAndAddressSection{
+    width: 90%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15rem;
+}
+
+#sitePictures{
+    height: 400px;
+    width: 700px;
+    background-color: #962124;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Slideshow container */
+div#slideShow {
+height: 400px !important;
+width: 700px !important;
+position: relative;
+margin: auto;
+}
+
+div#slideShow img{
+    height: 400px !important;
+    width: 100% !important;
+}
+
+/* Hide the images by default */
+.mySlides {
+display: none;
+}
+
+/* The dots indicators */
+.dotIndicator {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 2px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+div#dotWrapper{
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+    position: absolute;
+    z-index: 1;
+}
+
+div#address{
+    display: flex;
+    flex-direction: column;
+}
+
+div#address span{
+    color: black;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+div#address span#openingHours{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#addressButtonsDiv{
+    margin-top: 2rem;
+}
+
+#mailButton{
+    border: none;
+    height: 35px;
+    width: 150px;
+    color: white;
+    background-color: var(--dark-red);
+    margin-right: 1rem;
+}
+
+#feedbackButton{
+    background-color: transparent;
+    border: 1.5px solid var(--dark-red);
+    height: 35px;
+    width: 150px;
+}
+
+div#slideShow button#viewLocation{
+    margin-left: 16rem;
+    border: none;
+    height: 40px;
+    width: 180px;
+    background-color: var(--dark-blue);
+    color: white;
+    position: absolute;
+    bottom: -5rem;
+}
+
+/* --------------------------------------Main--------------------------------- End */
+
+
+/* ------------------------------------Footer------------------------------------------ Start */
+footer{
+    background-color: var(--dark-blue);
+    display: grid;
+    grid-template-rows: repeat(2,auto);
+}
+
+#footerOptionsDiv{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#backToTopDiv,
+#contactUsDiv{
+    display: flex;
+    align-items: center;
+}
+
+#backToTopDiv span,
+#contactUsDiv span{
+    font-family: Lato_Regular;
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 10px;
+}
+
+#contactUsDiv div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    border-color: white;
+    border-style: dashed;
+    transition: 200ms;
+}
+
+#contactUsDiv div:hover{
+    transform: scale(1.4);
+}
+
+#backToTopDiv div{
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#copyright{
+    grid-row: 2;
+    text-align: center;
+    display: block;
+    font-family: Lato_Light;
+    font-size: 1.2rem;
+    color: lightgray;
+    opacity: 0.7;
+}
+
+.social{
+    color: white;
+    font-size: 1.4rem !important;
+}
+
+.toTop{
+    font-size: 2rem !important;
+    color: rgb(26, 26, 26);
+    transition: 200ms;
+}
+
+.toTop:hover{
+    transform: translateY(-3px);
+}
+
+/* ------------------------------------------Footer-------------------------------------- End */
+
+@-webkit-keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+@-moz-keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+@-o-keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
+@-ms-keyframes fade {
+from {opacity: .4}
+to {opacity: 1}
+}
+
